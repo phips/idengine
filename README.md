@@ -1,14 +1,14 @@
 ### idEngine
-The idEngine came about when I was developing an IoT product, and needed an way to deploy millions of identities (user id, secret) to devices.
+The idEngine came about when I was developing an IoT product, and needed a way to deploy millions of identities (user id, secret) to devices.
 Prototyping with the Arduino Nano 33 IoT, it was clear there are significant logical security challenges in deploying credentials.
 
 There is almost nothing secret on an IoT device, so factory installed credentials seems like the wrong approach.
-The common case where a device is reset also raises the question, of whether a secret can be rotated safely?
+The common case where a device is reset also raises the question of whether a secret can be rotated safely.
 
 In addition, there are significant scaling challenges to running a credential service running into the millions of accounts.
 The keywords here, from an old infrastructure guy, are: simplicity, robustness, automation.
 
-My approach is to treat an IoT device, and to a lesser extent a mobile app install, as simple a receptacle that can hold a credential.
+My approach is to treat an IoT device, and to a lesser extent a mobile app install, as a simple receptacle that can hold a credential.
 However, until a credential is deployed that device has no identity.
 Resetting the device turns it back into a mere receptacle.
 
@@ -16,11 +16,11 @@ idEngine currently supports either Redis (default) or HashiCorp Vault backends.
 
 ### Project Goals
 * simplify the path to deploy best-practice for managing credentials
-* an easy to deploy, secure credential store
+* a secure and easy to deploy credential store
 * encourage the use of dynamic credentials and high-frequency secret rotation
 
 ### Audience
-* IoT hackers and makers, who need easy to test and deploy credentials
+* IoT hackers and makers who need easy to test and deploy credentials
 * Developers in a micro-service environment, who need a simple, fast, secure credential store
 * People interested in improving on the legacy user/password key-pair approach
 
